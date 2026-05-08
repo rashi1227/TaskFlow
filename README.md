@@ -58,18 +58,6 @@ The frontend runs on `http://localhost:5173` and proxies API calls to the backen
 | `JWT_EXPIRATION` | `86400000` (24h) | JWT token expiration in ms |
 | `VITE_API_URL` | `http://localhost:8080/api` | Backend API URL for frontend |
 
-## Docker Deployment
-
-```bash
-# Build and start all services
-docker-compose up --build
-
-# Access:
-# Frontend: http://localhost:3000
-# Backend:  http://localhost:8080
-# MongoDB:  localhost:27017
-```
-
 ## API Endpoints
 
 ### Auth
