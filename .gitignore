@@ -1,0 +1,22 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Backend (Java/Maven)
+backend/target/
+backend/.mvn/
+backend/*.log
+backend/bin/
+
+# Frontend (Node/React)
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/*.log
+
+# OS
+.DS_Store
+Thumbs.db
