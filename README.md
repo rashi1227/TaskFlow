@@ -7,7 +7,10 @@ A full-stack Team Task Manager application with User Authentication, Role-Based 
 - **Frontend**: React 19 (Vite), Tailwind CSS, Redux Toolkit, Recharts, Framer Motion, @dnd-kit
 - **Backend**: Spring Boot 3.2.5, Spring Security (JWT), Spring Data MongoDB
 - **Database**: MongoDB
-- **Deployment**: Netlify
+- **Deployment**: 
+  - **Frontend**: [Netlify](https://taskflowprog.netlify.app/)
+  - **Backend**: [Render](https://taskflow-a0rq.onrender.com)
+  - **Database**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
 ## Features
 
@@ -56,7 +59,32 @@ The frontend runs on `http://localhost:5173` and proxies API calls to the backen
 | `MONGO_URI` | `mongodb://localhost:27017/taskmanager` | MongoDB connection string |
 | `JWT_SECRET` | (built-in default) | Secret key for JWT signing |
 | `JWT_EXPIRATION` | `86400000` (24h) | JWT token expiration in ms |
-| `VITE_API_URL` | `http://localhost:8080/api` | Backend API URL for frontend |
+| `VITE_API_URL` | `https://taskflow-a0rq.onrender.com/api` | Backend API URL for frontend |
+
+## Docker Deployment
+
+```bash
+# Build and start all services
+docker-compose up --build
+
+# Access:
+# Frontend: http://localhost:3000
+# Backend:  https://taskflow-a0rq.onrender.com (Remote)
+# MongoDB:  Managed (Atlas)
+```
+
+## Deployment (Render/Railway)
+
+1. **Backend (Render)**:
+   - URL: `https://taskflow-a0rq.onrender.com`
+   - Environment Variables:
+     - `MONGO_URI` → your MongoDB Atlas connection string
+     - `JWT_SECRET` → a secure random string
+2. **Frontend (Netlify)**:
+   - URL: `https://taskflowprog.netlify.app`
+   - Set environment variable:
+     - `VITE_API_URL` → `https://taskflow-a0rq.onrender.com/api`
+5. Both services will auto-deploy on push
 
 ## API Endpoints
 
