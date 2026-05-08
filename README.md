@@ -7,7 +7,7 @@ A full-stack Team Task Manager application with User Authentication, Role-Based 
 - **Frontend**: React 19 (Vite), Tailwind CSS, Redux Toolkit, Recharts, Framer Motion, @dnd-kit
 - **Backend**: Spring Boot 3.2.5, Spring Security (JWT), Spring Data MongoDB
 - **Database**: MongoDB
-- **Deployment**: Docker, Docker Compose, Railway-ready
+- **Deployment**: Netlify
 
 ## Features
 
@@ -69,21 +69,6 @@ docker-compose up --build
 # Backend:  http://localhost:8080
 # MongoDB:  localhost:27017
 ```
-
-## Railway Deployment
-
-1. **Connect your GitHub repo** to Railway
-2. **Create a MongoDB service** on Railway (or use MongoDB Atlas)
-3. **Deploy the backend**:
-   - Set root directory to `backend`
-   - Add environment variables:
-     - `MONGO_URI` → your MongoDB connection string
-     - `JWT_SECRET` → a secure random string
-4. **Deploy the frontend**:
-   - Set root directory to `frontend`
-   - Add build argument:
-     - `VITE_API_URL` → your Railway backend URL + `/api`
-5. Both services will auto-deploy on push
 
 ## API Endpoints
 
